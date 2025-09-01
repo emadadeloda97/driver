@@ -134,32 +134,13 @@ def upload():
             flash(f'File {filename} uploaded successfully.', 'success')
         return redirect(url_for('dashboard'))
         
-      
-
-        
-        
-        
-        
-        
-        
-        
-        # file = request.files['file']
-        # if file.filename == '':
-        #     flash('No selected file', 'danger')
-        #     return redirect(request.url)
-        # folderPath = 'upload_'+flask_login.current_user.username if flask_login.current_user.is_authenticated else ''
-        # if not os.path.exists(folderPath):os.makedirs(folderPath)
-        # filepath = os.path.join(folderPath, file.filename)
-        # file.save(filepath)
-        # flash('File uploaded successfully', 'success')
-        # print(file.filename)
     return render_template('upload.html')
 
 
 @app.route("/uploads/<filename>")
 def uploaded_file(filename):
     folderPath = 'upload_'+flask_login.current_user.username if flask_login.current_user.is_authenticated else ''
-    return send_from_directory(folderPath, filename)
+    return send_from_directory(folderPath, filename,as_attachment=True)
 
 @app.route("/delete/<filename>", methods=["POST"])
 def delete_file(filename):
