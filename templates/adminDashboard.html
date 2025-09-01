@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow px-6 py-3 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-gray-700">My Project</h1>
+    <div>
+      <a href="/" class="text-gray-600 hover:text-blue-600 px-3">Home</a>
+      <a href="/about" class="text-gray-600 hover:text-blue-600 px-3">About</a>
+      <a href="/logout" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="p-8">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Admin Dashboard</h2>
+
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-2 text-gray-700">Users</h3>
+        <p class="text-gray-600 mb-3">Manage registered users in the system.</p>
+        <a href="#" class="text-blue-500 hover:underline">View Users →</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-2 text-gray-700">Reports</h3>
+        <p class="text-gray-600 mb-3">Check system activity and reports.</p>
+        <a href="#" class="text-blue-500 hover:underline">View Reports →</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mb-2 text-gray-700">Settings</h3>
+        <p class="text-gray-600 mb-3">Update system configuration.</p>
+        <a href="#" class="text-blue-500 hover:underline">Go to Settings →</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
